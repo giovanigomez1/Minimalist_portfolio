@@ -1,0 +1,90 @@
+.contactus {
+  margin-top: 6rem;
+  &--getintouch {
+    border-top: 1px solid var(--light-grey);
+    border-bottom: 1px solid var(--light-grey);
+    display: grid;
+    grid-template-columns: 40% 60%;
+    padding: 4rem 0;
+    margin: 0 4rem;
+    @media only screen and (max-width: $bp-medium){
+      grid-template-columns: 1fr;
+      row-gap: 2rem;
+    }
+    &__title {
+      & h3 {
+        font-size: 4rem;
+      }
+    }
+    &__text {
+      padding: 1rem;
+      font-family: "Public Sans", serif;
+      @media only screen and (max-width: $bp-small){
+        padding: 0;
+      }
+      & p {
+        font-size: 1.6rem;
+        line-height: 1.8;
+        margin-bottom: 2rem;
+        color: var(--dark-blue);
+      
+      }
+      &-social {
+        display: flex;
+        
+        align-items: center;
+        gap: 1rem;
+      }
+    }
+    
+  }
+  &--form {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    margin: 6rem 4rem 0;
+    @media only screen and (max-width: $bp-medium){
+      grid-template-columns: 1fr;
+      row-gap: 3rem;
+    }
+    &__title {
+      & h3 {
+        font-size: 4rem;
+      }
+    }
+    &__data {
+      font-family: "Public Sans", serif;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      .form__group {
+        display: flex;
+        gap: .6rem;
+        flex-direction: column;
+        & input, 
+        & textarea {
+          border: 1px solid transparent;
+          padding: 1.4rem 2rem;
+          background-color: var(--light-grey);
+          
+          font-family: "Public Sans", serif;
+        }
+        & label {
+          font-size: 1.4rem;
+          color: var(--dark-blue);
+          font-weight: 600;
+        }
+        &--btn {
+          & button {
+            background-color: var(--dark-blue);
+            color: var(--light-grey);
+          }
+        }
+        & input:focus, 
+        & textarea:focus {
+          outline: none;
+          border: 1px solid var(--slightly-desaturated-cyan);
+        }
+      }
+    }
+  }
+}

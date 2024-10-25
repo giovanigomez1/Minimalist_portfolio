@@ -1,0 +1,72 @@
+@mixin textStyle {
+  & h3 {
+    font-size: 3rem;
+    color: var(--dark-blue);
+    @media only screen and (max-width: $bp-small){
+      font-size: 2.5rem;
+    }
+  }
+  & p {
+    font-size: 1.6rem;
+    color: var(--slightly-desaturated-cyan);
+  }
+}
+
+
+.carrousel {
+  width: 100%;
+  border-top: 1px solid var(--light-grey);
+  border-bottom: 1px solid var(--light-grey);
+  margin: 6rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  &__left {
+    cursor: pointer;
+    padding: 2rem 0;
+    border-right: 1px solid var(--light-grey);
+    display: flex;
+    justify-content: flex-start;
+    gap: 3rem;
+    align-items: center;
+    &--previous--name {
+      @include textStyle;
+    }
+    @media only screen and (max-width: $bp-small){
+      display: grid;
+      gap: 1rem;
+      justify-content: center;
+    }
+  }
+  &__right {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 3rem;
+    @media only screen and (max-width: $bp-small){
+      padding: 2rem 0;
+    }
+    &--next {
+      @media only screen and (max-width: $bp-small){
+        grid-row: 2;
+      }
+    }
+    &--icon {
+      @media only screen and (max-width: $bp-small){
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+    &--next--name {
+      @include textStyle;
+      @media only screen and (max-width: $bp-small){
+        grid-row: 2rem;
+      }
+    }
+    @media only screen and (max-width: $bp-small){
+      display: grid;
+      gap: 1rem;
+      justify-content: center;
+    }
+  }
+}

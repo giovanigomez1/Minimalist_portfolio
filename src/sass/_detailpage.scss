@@ -1,0 +1,281 @@
+.detail__page {
+  margin-top: 6rem;
+  @media only screen and (max-width: $bp-medium){
+    padding: 0 4rem;
+  }
+  @media only screen and (max-width: $bp-small){
+    padding: 0 2rem;
+    margin-top: 2rem;
+  }
+
+  &--hero {
+    width: 100%;
+    height: 50rem;
+    @media only screen and (max-width: $bp-medium){
+      height: 36rem;
+    }
+    @media only screen and (max-width: $bp-small){
+      height: 29rem;
+    }
+    @media only screen and (max-width: $bp-small){
+      height: 45vw;
+      min-height: 18rem;
+    }
+  }
+  .hero-img-Manage {
+    background-image: url('../images/detail/desktop/image-manage-hero.jpg');
+    background-size: contain;
+    @media only screen and (max-width: $bp-medium){
+      background-image: url('../images/detail/tablet/image-manage-hero.jpg');
+      background-repeat: no-repeat;
+    }
+    @media only screen and (max-width: $bp-small){
+      background-image: url('../images/detail/mobile/image-manage-hero.jpg');
+    }
+  }
+  
+  .hero-img-Bookmark {
+    background-image: url('../images/detail/desktop/image-bookmark-hero.jpg');
+    background-size: contain;
+    @media only screen and (max-width: $bp-medium){
+      background-image: url('../images/detail/tablet/image-bookmark-hero.jpg');
+      background-repeat: no-repeat;
+    }
+    @media only screen and (max-width: $bp-small){
+      background-image: url('../images/detail/mobile/image-bookmark-hero.jpg');
+    }
+  }
+  .hero-img-Insure {
+    background-image: url('../images/detail/desktop/image-insure-hero.jpg');
+    background-size: contain;
+    @media only screen and (max-width: $bp-medium){
+      background-image: url('../images/detail/tablet/image-insure-hero.jpg');
+      background-repeat: no-repeat;
+    }
+    @media only screen and (max-width: $bp-small){
+      background-image: url('../images/detail/mobile/image-insure-hero.jpg');
+    }
+  }
+  .hero-img-Fylo {
+    background-image: url('../images/detail/desktop/image-fylo-hero.jpg');
+    background-size: contain;
+    @media only screen and (max-width: $bp-medium){
+      background-image: url('../images/detail/tablet/image-fylo-hero.jpg');
+      background-repeat: no-repeat;
+    }
+    @media only screen and (max-width: $bp-small){
+      background-image: url('../images/detail/mobile/image-fylo-hero.jpg');
+    }
+  }
+
+  &--content {
+    margin-top: 8rem;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    @media only screen and (max-width: $bp-medium){
+      margin-top: 0;
+      grid-template-columns: 1fr;
+    }
+    &-project_name {
+      gap: 3rem;
+      &-container {
+        border-top: 1px solid var(--light-grey);
+        border-bottom: 1px solid var(--light-grey);
+        padding: 4rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 3rem;
+        @media only screen and (max-width: $bp-medium){
+          display: grid;
+          grid-template-rows: .5fr .5fr .5fr;
+          grid-template-columns: 1fr 1fr;
+          column-gap: 4rem;
+          row-gap: 2rem;
+        }
+        @media only screen and (max-width: $bp-medium){
+          display: flex;
+        }
+        &-title {
+          & h2 {
+            font-size: 4rem;
+            color: var(--dark-blue);
+          }
+        }
+        &-desc {
+          font-family: "Public Sans", serif;
+          @media only screen and (max-width: $bp-medium){
+            grid-column: 2 / 4;
+            grid-row: 1 / 4;
+          }
+
+          & p {
+            padding-right: 1rem;
+            font-size: 1.6rem;
+            line-height: 2;
+            color: var(--dark-blue);
+          }
+        }
+        &-stack {
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+          & p {
+            font-family: "Public Sans", serif;
+            font-size: 1.6rem;
+            color: var(--slightly-desaturated-cyan);
+          }
+        }
+        & button {
+          @media only screen and (max-width: $bp-medium){
+            width: 60%;
+            padding: 1.6rem 3rem;
+          }
+        }
+      }
+    } 
+    &-project_background {
+      padding-left: 7rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      @media only screen and (max-width: $bp-medium){
+        padding-left: 0;
+        margin-top: 4rem;
+      }
+      &-title {
+        & h3 {
+          font-size: 3rem;
+        }
+      }
+      &-content {
+        font-family: "Public Sans", serif;
+        & p {
+          font-size: 1.6rem;
+          line-height: 2;
+          color: var(--dark-blue);
+        }
+      }
+      &-preview {
+        & h3 {
+          font-size: 3rem;
+          margin: 3rem 0;
+          
+        }
+        .preview__imgs {
+          width: 100%;
+          height: 91rem;
+          display: flex;
+          flex-direction: column;
+          gap: 3rem;
+          @media only screen and (max-width: $bp-small){
+            height: 50vh;
+          }
+          &--1, 
+          &--2 {
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 45rem;
+            max-height: 45rem;
+            @media only screen and (max-width: $bp-small){
+              height: 50vh;
+            }
+          }
+          .preview-img1-Manage {
+            background-size: contain;
+            background-image: url('../images/detail/desktop/image-manage-preview-1.jpg');
+            @media only screen and (max-width: $bp-medium){
+              background-image: url('../images/detail/tablet/image-manage-preview-1.jpg');
+            }
+            @media only screen and (max-width: $bp-small){
+              background-image: url('../images/detail/mobile/image-manage-preview-1.jpg');
+            }
+
+          }
+          .preview-img2-Manage {
+            background-image: url('../images/detail/desktop/image-manage-preview-2.jpg');
+            background-size: contain;
+            @media only screen and (max-width: $bp-medium){
+              background-image: url('../images/detail/tablet/image-manage-preview-2.jpg');
+            }
+            @media only screen and (max-width: $bp-small){
+              background-image: url('../images/detail/mobile/image-manage-preview-2.jpg');
+            }
+          }
+          .preview-img1-Bookmark {
+            background-image: url('../images/detail/desktop/image-bookmark-preview-1.jpg');
+            background-size: contain;
+            @media only screen and (max-width: $bp-medium){
+              background-image: url('../images/detail/tablet/image-bookmark-preview-1.jpg');
+            }
+            @media only screen and (max-width: $bp-small){
+              background-image: url('../images/detail/mobile/image-bookmark-preview-1.jpg');
+            }
+          }
+          .preview-img2-Bookmark {
+            background-image: url('../images/detail/desktop/image-bookmark-preview-2.jpg');
+            background-size: contain;
+            @media only screen and (max-width: $bp-medium){
+              background-image: url('../images/detail/tablet/image-bookmark-preview-2.jpg');
+            }
+            @media only screen and (max-width: $bp-small){
+              background-image: url('../images/detail/mobile/image-bookmark-preview-2.jpg');
+            }
+          }
+
+
+          .preview-img1-Insure {
+            background-image: url('../images/detail/desktop/image-insure-preview-1.jpg');
+            background-size: contain;
+            @media only screen and (max-width: $bp-medium){
+              background-image: url('../images/detail/tablet/image-insure-preview-1.jpg');
+            }
+            @media only screen and (max-width: $bp-small){
+              background-image: url('../images/detail/mobile/image-insure-preview-1.jpg');
+            }
+          }
+
+
+          .preview-img2-Insure {
+            background-image: url('../images/detail/desktop/image-insure-preview-2.jpg');
+            background-size: contain;
+            @media only screen and (max-width: $bp-medium){
+              background-image: url('../images/detail/tablet/image-insure-preview-2.jpg');
+            }
+            @media only screen and (max-width: $bp-small){
+              background-image: url('../images/detail/mobile/image-insure-preview-2.jpg');
+            }}
+
+
+
+          .preview-img1-Fylo {
+            background-image: url('../images/detail/desktop/image-fylo-preview-1.jpg');
+            background-size: contain;
+            @media only screen and (max-width: $bp-medium){
+              background-image: url('../images/detail/tablet/image-fylo-preview-1.jpg');
+            }
+            @media only screen and (max-width: $bp-small){
+              background-image: url('../images/detail/mobile/image-fylo-preview-1.jpg');
+            }
+          }
+          .preview-img2-Fylo {
+            background-image: url('../images/detail/desktop/image-fylo-preview-2.jpg');
+            background-size: contain;
+            @media only screen and (max-width: $bp-medium){
+              background-image: url('../images/detail/tablet/image-fylo-preview-2.jpg');
+            }
+            @media only screen and (max-width: $bp-small){
+              background-image: url('../images/detail/mobile/image-fylo-preview-2.jpg');
+            }
+          }
+                      
+
+          
+
+
+        }
+      }
+    }
+  }
+}
