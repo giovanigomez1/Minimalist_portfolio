@@ -1,7 +1,7 @@
 import Header from './components/Header'
 import HomePage from './components/HomePage'
 import Footer from './components/Footer'
-import PorfolioIdx from './pages/portfolioIdx'
+import PorfolioIdx from './pages/PortfolioIdx'
 import PageDetail from './pages/PageDetail'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import PorfolioHome from './pages/PortfolioHome'
