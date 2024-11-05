@@ -36,9 +36,9 @@
         gap: 1rem;
       }
     }
-    
   }
   &--form {
+    position: relative;
     display: grid;
     grid-template-columns: 40% 60%;
     margin: 6rem 4rem 0;
@@ -65,13 +65,15 @@
           border: 1px solid transparent;
           padding: 1.4rem 2rem;
           background-color: var(--light-grey);
-          
           font-family: "Public Sans", serif;
         }
         & label {
           font-size: 1.4rem;
           color: var(--dark-blue);
           font-weight: 600;
+        }
+        & p {
+          color: var(--bright-red);
         }
         &--btn {
           & button {
@@ -84,6 +86,23 @@
           outline: none;
           border: 1px solid var(--slightly-desaturated-cyan);
         }
+      }
+    }
+    &__completion {
+      position: absolute;
+      background-color: red;
+      bottom: -25%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 30rem;
+      & p {
+        font-size: 1.8rem;
+        text-align: center;
+        padding: 1.4rem;
+        text-transform: uppercase;
+        color: white;
+        background-color: var(--slightly-desaturated-cyan);
+        font-family: "Public Sans", serif;
       }
     }
   }

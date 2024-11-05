@@ -13,20 +13,14 @@ function Header() {
   function displayMenu() {
     setShowMenu(() => !showMenu)
   }
-
   function closeMenu() {
     setShowMenu(false)
   }
- 
   useEffect(() => {
     const screenSize = window.innerWidth
     if(screenSize <= 599) setMobileView(true)
   }, [])
   
-
-
-
-
   return (
     <header className="container header">
       <div className="header__logo">

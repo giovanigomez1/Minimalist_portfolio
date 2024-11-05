@@ -2,11 +2,9 @@ import Cta from "../components/Cta"
 
 function PageDetail({children, info}) {
 
-  console.log(info)
   return (
     <div className="detail__page container">
       <div className={`detail__page--hero hero-img-${info.title}`}></div>
-      
       <div className="detail__page--content">
         <div className="detail__page--content-project_name">
           <div className="detail__page--content-project_name-container">
@@ -18,7 +16,6 @@ function PageDetail({children, info}) {
             </div>
             <div className="detail__page--content-project_name-container-stack">
               <p>Interaction Design / Front End Development</p>
-
               <p>{info.stack}</p>
             </div>
             <button className="btn">
@@ -38,7 +35,6 @@ function PageDetail({children, info}) {
               real-world coding problems. I’ve learned something new with each project, helping 
               me to improve and adapt my style.</p>
           </div>
-
           <div className="detail__page--content-project_background-preview">
             <h3>Static Previews</h3>
             <div className="preview__imgs">
@@ -46,12 +42,6 @@ function PageDetail({children, info}) {
               <div className={`preview__imgs--2 preview-img2-${info.title}`}></div>
             </div>
           </div>
-
-
-          
-
-
-
         </div>
       </div>
       {children}

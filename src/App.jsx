@@ -9,13 +9,7 @@ import Carrousel from './components/Carrousel'
 import ContactUs from './pages/ContactUs'
 import data from './data/projects.json'
 
-
-
-
-
-function App() {
-  console.log(data.data[0].title)
-  
+function App() {  
   return (
     <>
         <BrowserRouter>
@@ -45,15 +39,11 @@ function App() {
                     <Carrousel info={data.data} project={'fylo'}/>
                   </PageDetail>
                 }/>
-
               </Route>
               <Route path='contact' element={<ContactUs />}/>
             </Routes>
-            
             <Footer />
         </BrowserRouter>
-        
-        
     </>
   )
 }

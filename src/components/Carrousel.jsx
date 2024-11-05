@@ -5,19 +5,13 @@ import { useNavigate } from 'react-router-dom'
 
 function Carrousel({info, project}) {
   const navigate = useNavigate()
-
-  console.log(info)
-
   const projectName = project.slice(0,1).toUpperCase().split('') + project.slice(1).split('').join('')
-  
   const projectIdx = info.findIndex(e => e.title === projectName)
   let nextProject 
   let prevProject
   projectIdx + 1 >= info.length ? (nextProject = 0) : (nextProject = projectIdx + 1)
   projectIdx - 1 < 0 ? (prevProject = info.length - 1) : (prevProject = projectIdx - 1)
   
-  
-  console.log(info[prevProject].title)
 
   function fixName(name) {
     return name.slice(0,1).toLowerCase().split('') + name.slice(1).split('').join('')  
@@ -33,7 +27,6 @@ function Carrousel({info, project}) {
 
 
   function goNext() {
-    console.log(fixName(info[nextProject].title))
     navigate(`/portfolio/${fixName(info[nextProject].title)}`)
     goUp()
   }
@@ -42,8 +35,6 @@ function Carrousel({info, project}) {
     goUp()
   }
   
-
-
   return (
     <div className="carrousel container">
       <div className="carrousel__left" onClick={goPrev}>
@@ -55,8 +46,7 @@ function Carrousel({info, project}) {
             <h3>{info[prevProject].title}</h3>
             <p>Previous Project</p>
           </div>
-        </div>
-        
+        </div> 
       </div>
       <div className="carrousel__right" onClick={goNext}>
         <div className="carrousel__right--next">
@@ -68,7 +58,6 @@ function Carrousel({info, project}) {
         <div className="carrousel__right--icon">
           <img src={arrowRight} alt="" />
         </div>
-        
       </div>
     </div>
   )

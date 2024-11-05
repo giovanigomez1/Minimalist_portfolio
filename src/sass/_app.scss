@@ -24,7 +24,6 @@ html {
   --slightly-desaturated-cyan: #5FB4A2;
   --dark-blue: #203A4c;
   --grayish-dark-blue: #33323D;
-
   --very-light-grey: #FAFAFA;
   --light-grey: #EAEAEB;
   --bright-red: #F43030;
@@ -39,13 +38,11 @@ html {
 body {
   font-family: "Ibarra Real Nova", serif;
 }
-
 .container {
   margin: 0 auto;
   max-width: 111.1rem;
   position: relative;
 }
-
 .btn {
   border: 1px solid var(--dark-blue);
   padding: 1.6rem 3.6rem;
@@ -55,8 +52,6 @@ body {
   color: var(--dark-blue);
   cursor: pointer;
 }
-
-
 @mixin menu {
   & ul {
     display: flex;
@@ -77,21 +72,36 @@ body {
     }
   }
 }
-
 .hidden {
   display: none !important;
 }
-
 .menuOpen {
   right: 0;
   transform: translateX(0) !important;
 }
-
 .menuClose {
   right: 100%;
   transform: translateX(500%) !important;
 }
-
 .active {
   color: #5FB4A2 !important;
 }
+.loader {
+  width: 14px;
+  height: 14px;
+  border: 2px solid #FFF;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  margin: 0 5.7rem;
+  }
+  @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+  } 

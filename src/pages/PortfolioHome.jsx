@@ -5,7 +5,6 @@ import Cta from "../components/Cta"
 function PorfolioHome() {
 
   const navigate = useNavigate()
-
   function goUp() {
     window.scrollTo({
       top: 0,
@@ -86,7 +85,6 @@ function PorfolioHome() {
       </div>
       <Cta />
     </>
-
   )
 }
 

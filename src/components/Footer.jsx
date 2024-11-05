@@ -7,16 +7,12 @@ import { NavLink } from 'react-router-dom'
 
 
 function Footer() {
-
-
   function goUp() {
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
     })
   }
-
-
 
   return (
     <footer className="footer">

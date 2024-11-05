@@ -6,7 +6,6 @@ import Cta from './Cta'
 function HomePage() {
 
   const navigate = useNavigate()
-
   function goPorfolio() {
     navigate('/portfolio')
     window.scrollTo({
@@ -14,7 +13,6 @@ function HomePage() {
       behavior: 'smooth',
     })
   }
-
 
   return (
     <>
