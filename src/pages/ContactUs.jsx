@@ -9,7 +9,6 @@ import emailjs from '@emailjs/browser'
 function ContactUs () {
 
   const form = useRef()
-
   function messageTimer() {
     return setTimeout(() => {
       setAlert(false)
@@ -84,8 +83,6 @@ function ContactUs () {
             <img src={linkedin} alt="" />
           </div>
         </div>
-
-
       </div>
       <div className="contactus--form">
         <div className="contactus--form__title">
