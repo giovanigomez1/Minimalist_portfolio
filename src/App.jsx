@@ -9,6 +9,7 @@ import Carrousel from './components/Carrousel'
 import ContactUs from './pages/ContactUs'
 import data from './data/projects.json'
 
+
 function App() {  
   return (
     <>

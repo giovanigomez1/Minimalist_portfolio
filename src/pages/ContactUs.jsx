@@ -4,11 +4,13 @@ import linkedin from '../images/icons/linkedin_black.svg'
 import { useRef, useState } from 'react'
 import isEmail from 'validator/lib/isEmail'
 import emailjs from '@emailjs/browser'
+import ReCAPTCHA from 'react-google-recaptcha'
 
 
 function ContactUs () {
 
   const form = useRef()
+  const recaptcha = useRef()
   function messageTimer() {
     return setTimeout(() => {
       setAlert(false)
@@ -130,6 +132,7 @@ function ContactUs () {
             {messageErr && <p className="massage__error">This field is required</p>}
           </div>
           <div className="form__group--btn">
+          <ReCAPTCHA ref={recaptcha} sitekey={import.meta.env.VITE__APP_SITE_KEY} />
             <button className="btn">
               {loading ? <span className="loader"></span> : 'Send Message'}
             </button>
