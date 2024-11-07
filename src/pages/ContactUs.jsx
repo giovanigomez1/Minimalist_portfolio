@@ -132,7 +132,7 @@ function ContactUs () {
             {messageErr && <p className="massage__error">This field is required</p>}
           </div>
           <div className="form__group--btn">
-          <ReCAPTCHA ref={recaptcha} sitekey={import.meta.env.VITE__APP_SITE_KEY} />
+          <ReCAPTCHA ref={recaptcha} sitekey={import.meta.env.VITE_APP_SITE_KEY} />
             <button className="btn">
               {loading ? <span className="loader"></span> : 'Send Message'}
             </button>
