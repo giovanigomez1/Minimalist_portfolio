@@ -36,6 +36,7 @@ function ContactUs () {
       if(!captchaValue) {
         setAlert(true)
         setSuccessMsg('Please complete the Captcha')
+        messageTimer()
       } else {
         setLoading(true)
         const sendEmail = await emailjs.sendForm(import.meta.env.VITE_APP_SERVICE_ID, import.meta.env.VITE_APP_TEMPLATE, form.current, import.meta.env.VITE_APP_API_KEY)
