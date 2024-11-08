@@ -76,6 +76,10 @@
           color: var(--bright-red);
         }
         &--btn {
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+          align-items: flex-start;
           & button {
             background-color: var(--dark-blue);
             color: var(--light-grey);

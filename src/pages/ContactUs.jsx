@@ -18,6 +18,7 @@ function ContactUs () {
   }
   async function submitForm(e) {    
     e.preventDefault()
+    const captchaValue = recaptcha.current.getValue()
     try {
       
       if(!name) {
@@ -32,13 +33,18 @@ function ContactUs () {
         setEmailErr(true)
         return
       }
-      setLoading(true)
-      const sendEmail = await emailjs.sendForm(import.meta.env.VITE_APP_SERVICE_ID, import.meta.env.VITE_APP_TEMPLATE, form.current, import.meta.env.VITE_APP_API_KEY)
-      messageTimer()
-      setAlert(true)
-      setLoading(false)
-      setSuccessMsg('Message Sent')
-      clearFields()
+      if(!captchaValue) {
+        setAlert(true)
+        setSuccessMsg('Please complete the Captcha')
+      } else {
+        setLoading(true)
+        const sendEmail = await emailjs.sendForm(import.meta.env.VITE_APP_SERVICE_ID, import.meta.env.VITE_APP_TEMPLATE, form.current, import.meta.env.VITE_APP_API_KEY)
+        messageTimer()
+        setAlert(true)
+        setLoading(false)
+        setSuccessMsg('Message Sent')
+        clearFields()
+      }
     } catch(err) {
       setLoading(false)
       setAlert(true)
@@ -132,7 +138,7 @@ function ContactUs () {
             {messageErr && <p className="massage__error">This field is required</p>}
           </div>
           <div className="form__group--btn">
-          <ReCAPTCHA ref={recaptcha} sitekey={import.meta.env.VITE_APP_SITE_KEY} />
+            <ReCAPTCHA ref={recaptcha} sitekey={import.meta.env.VITE_APP_SITE_KEY} />
             <button className="btn">
               {loading ? <span className="loader"></span> : 'Send Message'}
             </button>
