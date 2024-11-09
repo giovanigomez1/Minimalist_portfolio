@@ -41,7 +41,7 @@ function App() {
                   </PageDetail>
                 }/>
               </Route>
-              <Route path='contact' element={<ContactUs />}/>
+              <Route path='/contact' element={<ContactUs />}/>
             </Routes>
             <Footer />
         </BrowserRouter>
