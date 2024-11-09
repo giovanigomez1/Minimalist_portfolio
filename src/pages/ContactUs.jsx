@@ -26,6 +26,12 @@ function ContactUs () {
     }, 7000)
   }
 
+  function goUp() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    })
+  }
 
   async function submitForm(e) {    
     e.preventDefault()
@@ -57,6 +63,7 @@ function ContactUs () {
         setSuccessMsg('Message Sent')
         clearFields()
         redirectHome()
+        goUp()
       }
     } catch(err) {
       setLoading(false)
