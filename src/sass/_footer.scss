@@ -90,6 +90,19 @@
         align-items: center;
         gap: 3rem;
       }
+      .author {
+        display: flex;
+        gap: 2rem;
+        p {
+          color: var(--very-light-grey);
+          font-size: 1.2rem;
+          & a:link, 
+          & a:visited {
+            color: var(--slightly-desaturated-cyan);
+            
+          }
+        }
+      }
     } 
   }
 }

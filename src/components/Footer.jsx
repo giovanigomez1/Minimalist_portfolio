@@ -26,6 +26,10 @@ function Footer() {
               <li><NavLink to="/contact" onClick={goUp}>Contact Me</NavLink></li>
             </ul>
           </div>
+          <div className='author'>
+            <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. </p>
+            <p>Coded by <a href="https://www.frontendmentor.io/profile/giovanigomez1" target="_blank">Giovani</a>.</p>
+          </div>
           <div className="footer__nav--cont-social">
             <img src={github} alt="" />
             <img src={twitter} alt="" />
