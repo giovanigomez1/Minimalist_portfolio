@@ -23,6 +23,7 @@ function ContactUs () {
   function redirectHome() {
     return setTimeout(() => {
       navigate('/')
+      goUp()
     }, 7000)
   }
 
@@ -63,7 +64,7 @@ function ContactUs () {
         setSuccessMsg('Message Sent')
         clearFields()
         redirectHome()
-        goUp()
+        
       }
     } catch(err) {
       setLoading(false)
