@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import logo from '../images/logo.svg'
 import hamburguer from '../images/icons/hamburger.svg'
 import close from '../images/icons/close.svg'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 
 
 function Header() {
@@ -24,7 +24,7 @@ function Header() {
   return (
     <header className="container header">
       <div className="header__logo">
-        <img src={logo} alt="" />
+        <Link to="/"><img src={logo} alt="" /></Link>
       </div>
       <div className="header__hamburger">
         <button onClick={displayMenu} className={`header__hamburger--open ${showMenu && 'hidden'}`}>

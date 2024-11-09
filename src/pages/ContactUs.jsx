@@ -5,17 +5,28 @@ import { useRef, useState } from 'react'
 import isEmail from 'validator/lib/isEmail'
 import emailjs from '@emailjs/browser'
 import ReCAPTCHA from 'react-google-recaptcha'
+import { useNavigate } from 'react-router-dom'
 
 
 function ContactUs () {
 
+  const navigate = useNavigate()
   const form = useRef()
   const recaptcha = useRef()
+
   function messageTimer() {
     return setTimeout(() => {
       setAlert(false)
     }, 7000)
   }
+
+  function redirectHome() {
+    return setTimeout(() => {
+      navigate('/')
+    }, 7000)
+  }
+
+
   async function submitForm(e) {    
     e.preventDefault()
     const captchaValue = recaptcha.current.getValue()
@@ -45,6 +56,7 @@ function ContactUs () {
         setLoading(false)
         setSuccessMsg('Message Sent')
         clearFields()
+        redirectHome()
       }
     } catch(err) {
       setLoading(false)
