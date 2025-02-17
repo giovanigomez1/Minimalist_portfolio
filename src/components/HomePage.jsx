@@ -21,7 +21,7 @@ function HomePage() {
         <div className="homepage__hero--about">
           <h1>
             Hey, I’m Alex 
-            Spencer and I
+            Gio and I
             love building
             beautiful websites
           </h1>
